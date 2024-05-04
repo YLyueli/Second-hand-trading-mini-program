@@ -1,0 +1,53 @@
+<view class="person_info_container">
+  <view class="person_bg">
+    <image mode="aspectFill" src="../../icons/4.jpeg" catchtap='preview_img'>
+      >
+    </image>
+  </view>
+  <view class="person_base_info">
+    <view class="user_img">
+      <image mode="aspectFill" src="{{userInfo.user_img}}" catchtap='preview_img'></image>
+    </view>
+    <view class="user_guanzhu">
+      <view class="num">{{attentions}}</view>
+      <view class="text">关注</view>
+    </view>
+    <view class="user_fans">
+      <view class="num">{{fans}}</view>
+      <view class="text">粉丝</view>
+    </view>
+    <view class="user_guanzhu_btn">
+      <button wx:if="{{openid!==userId && isFollow==='0'}}" bindtap="handleFollow">+ 关注</button>
+      <button wx:if="{{openid!==userId && isFollow==='1'}}" bindtap="handleCancelFollow">已关注</button>
+    </view>
+  </view>
+  <view class="person_name">
+    <view class="name">{{userInfo.user_name}}</view>
+    <view class="school">{{userInfo.user_school}}</view>
+  </view>
+  <view class="person_main">
+    <view class="title_container">
+      <view class="title">我的宝贝</view>
+      <view class="fff"></view>
+    </view>
+    <view class="index_business_display" wx:if="{{isData === 1}}">
+      <navigator wx:for="{{commoditys}}" wx:key="{{index}}" url="/pages/goods_detail/index?userId={{userId}}&commodityId={{item.commodity_id}}" hover-class="none" class="index_business_wrap">
+        <image mode="aspectFill" src="{{item.imgs}}"></image>
+        <view class="business_title">{{item.title}}</view>
+        <view class="business_price_wrap">
+          <view class="business_price">￥{{item.price}}</view>
+          <view class="business_love_num">{{item.wants}}人想要</view>
+        </view>
+        <view wx:if="{{item.sell===1}}" class="iconfont icon-maidiaole icon"></view>
+      </navigator>
+    </view>
+    <view class="index_business_display no" wx:if="{{isData === 0}}">您还没有发布宝贝</view>
+  </view>
+</view>
+
+
+<i-modal visible="{{ visible }}" actions="{{actions}}" bind:click="handleClick">
+    <view>是否取消关注？</view>
+</i-modal>
+<i-toast id="toast" />
+<i-message id="message" />

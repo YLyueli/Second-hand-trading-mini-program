@@ -1,0 +1,15 @@
+<view class="stu_info_container">
+  <navigator url="/pages/school/index" class="school">
+    <view class="select_school">学校</view>
+    <view class="school_name">
+      <view class="name">{{school}}</view>
+      <view class="iconfont icon-dayu"></view>
+    </view>
+  </navigator>
+</view>
+<view class="tips">提示：您还未绑定学校，请先绑定学校。
+  提交后，将不能再修改学校</view>
+<view class="submit_btn" bindtap="handleSchool">提交</view>
+
+<i-message id="message" />
+<i-toast id="toast" />

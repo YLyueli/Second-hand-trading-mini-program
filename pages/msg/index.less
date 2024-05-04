@@ -1,0 +1,110 @@
+.msg_list_container {
+  overflow:hidden;white-space:nowrap;
+  font-size: 34rpx;
+  color: #474747;
+
+  scroll-view {
+    background-color: #fff;
+  }
+  .msg_notice_wrap {
+    display: flex;
+    align-items: center;
+    height: 140rpx;
+    .iconfont {
+      font-size: 96rpx;
+      margin :  0 20rpx 0 30rpx;
+    }
+  }
+  .separate_wrap {
+    background-color: #F1F1F1;
+    height: 20rpx;
+  }
+  .msg_content_wrap {
+    .msg_wrap {
+      display: flex;
+      align-items: center;
+      padding: 30rpx 30rpx;
+      // border-bottom: 1rpx solid #f7f4f4;
+      .user_img {
+        width: 100rpx;
+        height: 100rpx;
+        overflow: hidden;
+        margin-right: 20rpx;
+        border-radius: 50%;
+        overflow: hidden;
+        image {
+          width: 100rpx;
+          height: 100rpx;
+        }
+      }
+    }
+    .user_datail {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      .user_name_time_wrap {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0 20rpx 0;
+        .user_time {
+          font-size: 28rpx;
+          color: #bbb;
+        }
+      }
+      .msg_content {
+        font-size: 28rpx;
+        color: #bbb;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .num_wrap {
+          width: 30rpx;
+          height: 30rpx;
+          background-color: #FE4242;
+          color: #fff;
+          font-size: 22rpx;
+          text-align: center;
+          line-height: 30rpx;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+    
+}
+
+::-webkit-scrollbar {
+  display:none;
+  width:0;
+  height:0;
+  color:transparent;
+}
+
+.msg_container {
+  width: 30rpx;
+  height: 30rpx;
+  position: fixed;
+  bottom: 60rpx;
+  left: 65%;
+  z-index: 99999;
+  font-size: 22rpx;
+  color: #fff;
+  background-color: #FE4242;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30rpx;
+}
+.notice_num_wrap {
+  position: absolute;
+  right: 30rpx;
+  width: 30rpx;
+  height: 30rpx;
+  font-size: 22rpx;
+  color: #fff;
+  background-color: #FE4242;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30rpx;
+}

@@ -1,0 +1,10 @@
+<view class="report_container">
+    <view class="report_content">
+        <textarea wx:if="{{isOk===0}}" class="textareaa" value="{{content}}" maxlength="1400" bindinput="handleInput" bindfocus="" bindblur="" bindconfirm="" ></textarea>
+        <view class="textareaa" wx:if="{{isOk===1}}">{{content}}</view>
+    </view>
+    <view wx:if="{{isOk===1}}" class="tip">您已成功举报该商品，管理员正在审核中~</view>
+    <view wx:if="{{isOk===0}}" class="tip">请您填写举报原因~</view>
+    <view class="report_btn" wx:if="{{isOk===1}}" style="background-color: #ccc;" >举报</view>
+    <view class="report_btn" wx:if="{{isOk===0}}"  bindtap="handleReport">举报</view>
+</view>

@@ -1,0 +1,69 @@
+<view class="user_info_wrap">
+  <navigator hover-class="none" url="/pages/person/index" class="user_infp_wrap">
+    <view class="user_info">
+      <image class="user_icon" src="{{userInfo.avatarUrl}}"></image>
+      <view class="name_school_wrap">
+        <view class="user_name">
+          <text>{{userInfo.nickName}}</text>
+          <view class="iconfont icon-dayu"></view>
+        </view>
+        <view class="user_school">{{school}}</view>
+      </view>
+    </view>
+  </navigator>
+</view>
+<view class="user_content">
+  <view class="user_main">
+    <view class="title">我的交易</view>
+    <view class="histroy_wrap">
+      <navigator url="/pages/my_release/index" hover-class="none">
+        <view class="iconfont icon-fabu_hong"></view>
+        <view class="his_name">我发布的</view>
+      </navigator>
+      <navigator url="/pages/my_sell/index" hover-class="none">
+        <view class="iconfont icon-qian-copy"></view>
+        <view class="his_name">我卖出的</view>
+      </navigator>
+      <navigator url="/pages/my_buy/index" hover-class="none">
+        <view class="iconfont icon-mai"></view>
+        <view class="his_name">我买到的</view>
+      </navigator>
+      <navigator url="/pages/my_collect/index" hover-class="none">
+        <view class="iconfont icon-shoucang"></view>
+        <view class="his_name">我的收藏</view>
+      </navigator>
+    </view>
+    <view style="height:20rpx;background: #f1f1f1;"></view>
+    <navigator url="/pages/my_friend/index" class="wrap">
+      我的关注
+      <view class="iconfont icon-dayu"></view>
+    </navigator>
+    <!-- <view class="wrap">
+      我的草稿
+      <view class="iconfont icon-dayu"></view>
+    </view> -->
+    <view style="height:20rpx;background: #f1f1f1;"></view>
+    <navigator url="/pages/help/index" class="wrap">
+      帮助中心
+      <view class="iconfont icon-dayu"></view>
+    </navigator>
+    <!-- <view class="wrap">
+      我的关注
+      <view class="iconfont icon-dayu"></view>
+    </view> -->
+    <navigator url="/pages/cus_service/index" class="wrap">
+      联系客服
+      <view class="iconfont icon-dayu"></view>
+    </navigator>
+    <navigator url="/pages/about/index" class="wrap">
+      关于我们
+      <view class="iconfont icon-dayu"></view>
+    </navigator>
+    <button class="exit" bindtap="loginout">退出登录</button>
+  </view>
+</view>
+
+<i-modal visible="{{ visible }}" actions="{{actions}}" bind:click="handleClick">
+    <view>亲，您确定要退出？</view>
+</i-modal>
+<i-toast id="toast" />

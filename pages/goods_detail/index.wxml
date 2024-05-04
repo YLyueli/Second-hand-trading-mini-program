@@ -1,0 +1,138 @@
+<view class="goods_detail_wrap" wx:if="{{displayAll === 1 && !isDelete || (displayAll === 0 && buyId === userId && !isDelete)}}" id="j_page">
+  <scroll-view>
+    <view class="user_info_wrap">
+      <view class="user_img_name" bindtap="handleJumpPerson">
+        <view class="user_img">
+          <image src="{{goodInfo.user_img}}" mode="aspectFill"></image>
+        </view>
+        <view class="user">
+          <view class="name">{{goodInfo.user_name}}</view>
+          <view class="school">{{goodInfo.user_school}} | {{goodInfo.time}}</view>
+        </view>
+      </view>
+      <view wx:if="{{isFollow == '0' && buyId !== userId && userId }}" class="attention" bindtap="handleFollow" style="color:#33cc99">
+        + 关注
+      </view>
+      <view wx:if="{{isFollow == '1' && buyId !== userId && userId }}" class="attention" bindtap="handleCancelFollow">
+        已关注
+      </view>
+    </view>
+    <view class="bus_price_follow">
+      <view class="bus_price">
+        ￥
+        <text>{{goodInfo.price}}</text>
+      </view>
+      <view class="bus_follow">{{goodInfo.wants}} 人想要</view>
+    </view>
+    <view class="bus_content">
+      <view class="mian_content">{{goodInfo.title}}</view>
+      <view class="mian_content">{{goodInfo.content}}</view>
+      <view class="pic_content">
+        <image wx:for="{{imgList}}" wx:key="{{index}}" mode="aspectFill" class="img" src="{{item}}" catchtap='preview_img' data-num="{{index}}"></image>
+      </view>
+    </view>
+    <view class="bus_operation">
+      <view class="left_wrap">
+        <view class="comment" bindtap="handleClickComment" data-type="{{1}}">
+          <view class="iconfont icon-pinglun"></view>
+          <text>评论</text>
+        </view>
+        <view class="collection" bindtap="handleCollection">
+          <view wx:if="{{isCollection===0}}" class="iconfont icon-shoucang1"></view>
+          <image wx:else src="../../icons/shoucang.png" class="imagee"></image>
+          <text wx:if="{{isCollection===0}}">收藏</text>
+          <text wx:else>已收藏</text>
+        </view>
+        <navigator wx:if="{{buyId !== userId}}" hover-class="none" url="/pages/report/index?userId={{userId}}&commodityId={{commodityId}}" class="report">
+          <view class="iconfont icon-jubao"></view>
+          <text>举报</text>
+        </navigator>
+      </view>
+      <view class="right_wrap" wx:if="{{buyId === userId}}">
+        <button bindtap="handleGudge">管理</button>
+      </view>
+      <view class="right_wrap" wx:if="{{buyId !== userId && goodInfo.sell === 0}}">
+        <button bindtap="handleBuy">我想要</button>
+      </view>
+      <view class="right_wrap" wx:if="{{buyId !== userId && goodInfo.sell === 1}}">
+        <button>卖掉了</button>
+      </view>
+    </view>
+    <view style="height:20rpx;background: #f1f1f1;padding:0;"></view>
+    <view class="my_comment_wrap">
+      <view class="title">评论</view>
+      <view class="content">
+        <view wx:for="{{commentList}}" wx:if="{{item.receive_user_id === ''}}" wx:key="{{index}}" class="user_comment_container">
+          <view class="user_comment_wrap" wx:if="{{item.receive_user_id === ''}}" bindtap="handleClickComment" data-type="{{2}}" data-id="{{item.group_id}}" data-receive="{{item.user_id}}">
+            <view class="left_comment_wrap">
+              <view class="user_img">
+                <image src="{{item.user_img}}" mode="aspectFill"></image>
+              </view>
+              <view class="main_comment">
+                <view class="user_comment_name">{{item.user_name}}</view>
+                <view class="main_content">{{item.content}}</view>
+              </view>
+            </view>
+            <view class="right_comment_wrap">{{item.time}}</view>
+          </view>
+          <view class="user_comment_wrap commentTrans" wx:for="{{commentList}}" wx:for-item="item2" wx:if="{{item.group_id == item2.group_id && item2.receive_user_id !== ''}}" bindtap="handleClickComment" data-type="{{2}}" data-id="{{item2.group_id}}" data-receive="{{item2.user_id}}">
+            <view class="left_comment_wrap">
+              <view class="user_img">
+                <image src="{{item2.user_img}}" mode="aspectFill"></image>
+              </view>
+              <view class="main_comment">
+                <view class="user_comment_name">{{item2.user_name}}</view>
+                <view class="main_content">
+                  回复
+                  <text style="color: #9F9F9F;font-weight:600;">{{item2.name}}</text>
+                  ：{{item2.content}}
+                </view>
+              </view>
+            </view>
+            <view class="right_comment_wrap">{{item2.time}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<view class="input_comment" wx:if="{{clickCommentBtn}}">
+  <input bindinput='sendTextBind' placeholder="评论" value='{{sendText}}' cursor-spacing='5' bindblur="handleBindBlur" focus="{{true}}" />
+  <button bindtap='sendBtn' disabled="{{sendText===''}}">发送</button>
+</view>
+<view class="goods_selled" wx:if="{{displayAll === 0 && buyId !== userId && !isDelete}}">
+  <view class="title">来晚了，宝贝被卖掉了~</view>
+  <view class="content" bindtap="handleGoodDetail">
+    <view class="left_wrap">
+      <image class='bus_img' mode="aspectFill" src='{{imgList[0]}}'></image>
+      <view class="bus_info">
+        <view class="bus_title">{{goodInfo.title}}</view>
+        <view class="bus_price">￥{{goodInfo.price}}</view>
+      </view>
+    </view>
+    <view class="right_wrap">
+      <view class="iconfont icon-maidiaole"></view>
+    </view>
+  </view>
+</view>
+<view class="goods_selled" wx:if="{{isDelete}}">
+  <view class="title">您要看的宝贝不存在或已被删除啦！</view>
+  <!-- <view class="content" bindtap="handleGoodDetail">
+    <view class="left_wrap">
+      <image class='bus_img' mode="aspectFill" src='{{imgList[0]}}'></image>
+      <view class="bus_info">
+        <view class="bus_title">{{goodInfo.title}}</view>
+        <view class="bus_price">￥{{goodInfo.price}}</view>
+      </view>
+    </view>
+    <view class="right_wrap">
+      <view class="iconfont icon-maidiaole"></view>
+    </view>
+  </view> -->
+</view>
+<i-modal visible="{{ visible }}" actions="{{actions}}" bind:click="handleClick">
+  <view>是否取消关注？</view>
+</i-modal>
+<i-toast id="toast" />
+<i-message id="message" />
+<i-modal title="管理" visible="{{ visible1 }}" actions="{{ goodInfo.sell === 0 ? actions1 : actions2 }}" action-mode="{{ vertical }}" bind:click="handleClick1"></i-modal>

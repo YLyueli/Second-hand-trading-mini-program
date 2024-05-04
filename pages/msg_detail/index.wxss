@@ -1,0 +1,140 @@
+Page {
+  overflow: hidden;
+}
+.homeView {
+  background-color: #F7F7F7;
+  margin-bottom: 100rpx;
+  min-height: 95vh;
+  position: relative;
+  overflow: hidden;
+  margin-top: 150rpx;
+}
+.buy_btn {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 150rpx;
+  background-color: #F7F7F7;
+  opacity: 1;
+  z-index: 999;
+  border-bottom: 1rpx solid #E8E8E8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.buy_btn .left_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 30rpx;
+}
+.buy_btn .left_wrap image {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+}
+.buy_btn .left_wrap .bus_info {
+  display: flex;
+  flex-direction: column;
+}
+.buy_btn .left_wrap .bus_info .bus_price {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.buy_btn .left_wrap .bus_info .bus_type {
+  font-size: 24rpx;
+  color: #A5A5A5;
+  padding: 10rpx;
+}
+.buy_btn .right_wrap .bus_buy_btn {
+  margin-right: 30rpx;
+  width: 160rpx;
+  height: 65rpx;
+  text-align: center;
+  line-height: 65rpx;
+  border-radius: 60rpx;
+  color: var(--themeColor);
+  font-weight: 600;
+  border: 1px solid var(--themeColor);
+}
+.listView {
+  overflow: hidden;
+}
+.listView .leftView {
+  margin: 40rpx 30rpx;
+}
+.listView .leftView .imgmsgleft .msg_box {
+  height: 80rpx;
+  margin-left: 30rpx;
+  background-color: #fff;
+}
+.listView .rightView {
+  margin: 40rpx 30rpx;
+}
+.listView .rightView .imgmsg .msg_box {
+  height: 80rpx;
+  margin-right: 30rpx;
+  background-color: var(--themeColor);
+}
+.listView image {
+  width: 80rpx;
+  height: 80rpx;
+}
+.listView .touimg {
+  border-radius: 50%;
+}
+.rightView {
+  text-align: right;
+}
+.imgmsgleft {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.imgmsg {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.msg_box {
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+  border-radius: 10rpx;
+  color: #2A501A;
+  font-size: 28rpx;
+  font-weight: 500;
+}
+.sendView {
+  display: flex;
+  width: 100%;
+  height: 120rpx;
+  position: fixed;
+  bottom: 0px;
+  border-top: 1rpx #FBFBFB solid;
+  background-color: white;
+  padding: 0 20rpx ;
+  align-items: center;
+  margin-top: 40rpx;
+}
+.sendView button {
+  font-size: 28rpx !important;
+  width: 18%;
+  height: 85rpx;
+  line-height: 85rpx;
+  text-align: center;
+  background-color: var(--themeColor);
+  color: white;
+}
+.sendView input {
+  width: 75%;
+  height: 75rpx;
+  padding-left: 30rpx;
+  border-radius: 15rpx;
+  margin-right: 20rpx;
+  border: 2rpx solid #E6E6E6;
+  background-color: #FCFAFB;
+}

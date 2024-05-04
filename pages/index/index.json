@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "i-modal": "../../dist/modal/index",
+    "SearchInput": "../../components/SearchInput/SearchInput"
+  },
+  "navigationBarTitleText": "校园二手交易平台",
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle":"dark"
+}

@@ -1,0 +1,18 @@
+<view class="search_input">
+  <navigator url="" hover-class="none" open-type="navigate">
+    <view class="iconfont icon-sousuo1"></view>
+    <input placeholder="搜索学校" value="{{inputValue}}" bindinput="handleSearchSchool"></input>
+  </navigator>
+</view>
+<view class="school">
+  <view wx:if="{{inputValue === ''}}">
+    <view wx:for="{{school}}" data-school="{{item}}" bindtap="handleSelectSchool">
+      <view class="name">{{item}}</view>
+    </view>
+  </view>
+  <view wx:else>
+    <view wx:for="{{searchSchool}}" data-school="{{item}}" bindtap="handleSelectSchool">
+      <view class="name">{{item}}</view>
+    </view>
+  </view>
+</view>

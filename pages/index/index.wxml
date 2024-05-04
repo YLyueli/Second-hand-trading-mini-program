@@ -1,0 +1,79 @@
+<view class="pyg_index">
+  <view class="search_input">
+    <navigator url="/pages/goods_list/index" hover-class="none" open-type="navigate">
+      <view class="iconfont icon-sousuo1"></view>
+      搜索想要的物品，例如：杯子
+    </navigator>
+  </view>
+  <!-- <swiper bindchange='swiperChange' bindtap="swipclick" indicator-dots autoplay circular='true' interval="{{3000}}" duration="{{800}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper> -->
+  <view class="index_classify_wrap">
+    <navigator hover-class="none" bindtap="handleSameSchool">
+      <view class="iconfont icon-xuexiaojianshe"></view>
+      <view class="classofiy_title">同校</view>
+    </navigator>
+    <navigator hover-class="none" url="/pages/goods_list/index?type=学习">
+      <view class="iconfont icon-shuji"></view>
+      <view class="classofiy_title">学习</view>
+    </navigator>
+    <navigator hover-class="none" url="/pages/goods_list/index?type=生活">
+      <view class="iconfont icon-ziyuan1"></view>
+      <view class="classofiy_title">生活</view>
+    </navigator>
+    <navigator hover-class="none" url="/pages/goods_list/index?type=衣物">
+      <view class="iconfont icon-yifu1"></view>
+      <view class="classofiy_title">衣物</view>
+    </navigator>
+    <navigator hover-class="none" url="/pages/goods_list/index?type=饰品">
+      <view class="iconfont icon-038-ornament"></view>
+      <view class="classofiy_title">饰品</view>
+    </navigator>
+    <navigator hover-class="none" url="/pages/goods_list/index?type=运动">
+      <view class="iconfont icon-jianshenlejieyixia"></view>
+      <view class="classofiy_title">运动</view>
+    </navigator>
+    <navigator hover-class="none" url="/pages/goods_list/index?type=数码">
+      <view class="iconfont icon-shouji"></view>
+      <view class="classofiy_title">数码</view>
+    </navigator>
+    <navigator hover-class="none" url="/pages/goods_list/index?type=美妆">
+      <view class="iconfont icon-kouhong-01"></view>
+      <view class="classofiy_title">美妆</view>
+    </navigator>
+    <navigator hover-class="none" url="/pages/goods_list/index?type=饮食">
+      <view class="iconfont icon-mihoutao"></view>
+      <view class="classofiy_title">饮食</view>
+    </navigator>
+    <navigator hover-class="none" url="/pages/goods_list/index?type=其他">
+      <view class="iconfont icon-qita3"></view>
+      <view class="classofiy_title">其他</view>
+    </navigator>
+  </view>
+  <view class="index_business_display">
+    <view wx:for="{{goodsList}}" bindtap="handleGoodDetail" data-item="{{item}}" hover-class="none" class="index_business_wrap">
+      <image mode="aspectFill" src="{{item.imgs}}"></image>
+      <view class="business_title">{{item.title}}</view>
+      <view class="business_price_wrap">
+        <view class="business_price">￥{{item.price}}</view>
+        <view class="business_love_num">{{item.wants}}人想要</view>
+      </view>
+      <view class="business_school">
+        <text>{{item.user_school}}</text>
+      </view>
+      <view class="business_seller">
+        <image mode="aspectFill" class="business_seller_icon" src="{{item.user_img}}"></image>
+        <view class="business_seller_name">{{item.user_name}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="login_container" wx:if="{{!openid}}"></view>
+<view class="login_wrap" wx:if="{{!openid}}">
+  <view class="title">欢迎来到校园二手交易平台~</view>
+  <navigator url="/pages/login/index" class="btn">去登录</navigator>
+</view>

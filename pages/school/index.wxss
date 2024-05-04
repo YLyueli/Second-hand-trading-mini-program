@@ -1,0 +1,38 @@
+Page {
+  background-color: #fff;
+}
+.search_input {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120rpx;
+  padding: 0rpx 30rpx 0rpx 30rpx;
+  background-color: var(--themeColor);
+}
+.search_input navigator {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 40rpx;
+  height: 70%;
+  background-color: #fff;
+  border-radius: 60rpx;
+  color: #666;
+}
+.search_input .iconfont {
+  color: var(--themeColor);
+  font-size: 45rpx;
+  margin-right: 20rpx;
+}
+.school {
+  margin-top: 120rpx;
+}
+.school .name {
+  padding: 0 40rpx;
+  height: 110rpx;
+  line-height: 110rpx;
+  border-bottom: 1rpx solid #F1F1F1;
+  font-size: 32rpx;
+  color: #555353;
+}

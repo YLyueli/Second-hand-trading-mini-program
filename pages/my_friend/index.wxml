@@ -1,0 +1,10 @@
+<view class="friend_wrap" wx:if="{{isData == 1}}">
+  <navigator wx:for="{{friends}}"wx:key="index" class="friend" hover-class="none" url="/pages/person/index?id={{item.user_id}}">
+    <view class="user_img">
+      <image src="{{item.user_img}}"></image>
+    </view>
+    <view class="info"><view class="user_name">{{item.user_name}}</view>
+    <view class="user_school">{{item.user_school}}</view></view>
+  </navigator>
+</view>
+<view class="none_bus" wx:if="{{isData == 0}}">亲，您还没有关注任何人哦~</view>

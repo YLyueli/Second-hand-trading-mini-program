@@ -1,0 +1,16 @@
+<i-tab-bar current="{{ current }}" color="#33CC99" bindchange="handleChange" >
+    <block wx:for="{{list}}" wx:key="index">
+        <i-tab-bar-item  key="{{item.status}}" icon="{{item.iconPath}}" current-icon="{{item.selectedIconPath}}" title="{{item.text}}" class="self_tabbar_style"></i-tab-bar-item>
+    </block>
+</i-tab-bar>
+
+<view wx:if="{{num>0}}" class="msg_wrap">{{num}}</view>
+<!-- <cover-view class="tab-bar">
+  <cover-view class="tab-bar-border"></cover-view>
+  <cover-view wx:for="{{list}}" wx:key="{{index}}" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+    <cover-image src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></cover-image>
+    <cover-view style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</cover-view>
+  </cover-view>
+</cover-view> -->
+
+

@@ -1,0 +1,12 @@
+<view class="login_wrap">
+  <view class="logo">
+    <image src="../../icons/logo.jpeg"></image>
+  </view>
+  <view class="welcome">同学，你好</view>
+  <view class="welcome">这里是校园二手交易平台</view>
+  <view class="login_btn"  bindtap="getUserProfile">
+    <view class="iconfont icon-weixin1"></view>
+    <view>微信一键绑定</view>
+  </view>
+</view>
+<i-toast id="toast" />

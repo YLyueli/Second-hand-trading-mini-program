@@ -1,0 +1,69 @@
+.bus_buy_container {
+  font-size: 28rpx;
+}
+.bus_buy_container .bus_detail_info {
+  background-color: #fff;
+  height: 200rpx;
+  margin: 30rpx;
+  overflow: hidden;
+  border-radius: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+}
+.bus_buy_container .bus_detail_info .left_view {
+  width: 180rpx;
+  height: 160rpx;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.bus_buy_container .bus_detail_info .left_view image {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 30rpx;
+}
+.bus_buy_container .bus_detail_info .right_view {
+  margin-left: 20rpx;
+}
+.bus_buy_container .bus_detail_info .right_view .bus_name {
+  padding-top: 5rpx;
+}
+.bus_buy_container .address_wrap {
+  height: 120rpx;
+  background-color: #fff;
+  margin: 30rpx;
+  overflow: hidden;
+  border-radius: 30rpx;
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  justify-content: space-between;
+  padding: 0 40rpx;
+}
+.bus_buy_container .buy_bus_btn {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 160rpx;
+  border-top: 1rpx solid #E8E8E8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  font-size: 30rpx;
+  padding: 0 30rpx;
+}
+.bus_buy_container .buy_bus_btn .bus_price {
+  font-weight: 600;
+  color: #F74C56;
+}
+.bus_buy_container .buy_bus_btn button {
+  margin: 0;
+  font-size: 30rpx;
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  background-color: #F74C56;
+  color: #fff;
+}

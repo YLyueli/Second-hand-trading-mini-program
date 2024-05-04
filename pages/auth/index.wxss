@@ -1,0 +1,35 @@
+.stu_info_container .school {
+  padding: 40rpx;
+  font-size: 36rpx;
+  display: flex;
+  background-color: #fff;
+  height: 160rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+.stu_info_container .school .school_name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stu_info_container .school .school_name .name {
+  padding: 20rpx;
+  font-size: 30rpx;
+  color: #c0bebe;
+}
+.submit_btn {
+  width: 60%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: var(--themeColor);
+  margin: 0 auto;
+  margin-top: 400rpx;
+  border-radius: 60rpx;
+  color: #fff;
+  background-image: var(--themeColor);
+}
+.tips {
+  margin: 30rpx;
+  color: red;
+}

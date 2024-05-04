@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "i-toast": "../../dist/toast/index",
+    "i-modal": "../../dist/modal/index",
+    "i-message": "../../dist/message/index"
+  },
+  "navigationBarTitleText": "购买商品"
+}

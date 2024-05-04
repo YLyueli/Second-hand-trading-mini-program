@@ -1,0 +1,26 @@
+<view class="bus_buy_container">
+  <view class="bus_detail_info">
+    <view class="left_view">
+      <image mode="aspectFill" src="{{commodityInfo.img}}"></image>
+    </view>
+    <view class="right_view">
+      <view class="bus_name">{{commodityInfo.title}}</view>
+      
+    </view>
+  </view>
+  <view class="address_wrap">
+    <text>交易方式</text>
+    <text>线下交易</text>
+  </view>
+  <view class="buy_bus_btn">
+      <view>价格：<text  class="bus_price">￥{{commodityInfo.price}}</text></view>
+    <button bindtap="buyBtn">立即支付</button>
+  </view>
+ 
+</view>
+
+<i-modal title="提示" visible="{{ visible }}" actions="{{actions}}" bind:click="handleClick">
+    <view>确认购买商品吗？</view>
+</i-modal>
+<i-toast id="toast" />
+<i-message id="message" />

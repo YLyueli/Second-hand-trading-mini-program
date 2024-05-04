@@ -1,0 +1,32 @@
+<view class="pyg_index">
+  <view class="search_input">
+    <navigator url="" hover-class="none" open-type="navigate">
+      <view class="iconfont icon-sousuo1"></view>
+      <input value="{{input}}" bindinput="handleInput">搜索想要的物品，例如：杯子</input>
+      <view class="search_btn" bindtap="handleSearch">搜索</view>
+    </navigator>
+  </view>
+  <!-- <view class="classify_container">
+    <scroll-view scroll-x scroll-left="{{scrollLeft}}" class="classify_wrap">
+      <view wx:for="{{classifySelect}}" wx:key="{{index}}" class="{{action === item?'active':''}}, classify" bindtap="handleSelect" data-item="{{item}}">{{item}}</view>
+    </scroll-view>
+  </view> -->
+  <view class="index_business_display" wx:if="{{isData===1}}">
+    <navigator wx:for="{{goodsList}}" wx:key="{{index}}" bindtap="handleGoodDetail" data-item="{{item}}" hover-class="none" class="index_business_wrap">
+      <image mode="aspectFill" src="{{item.imgs}}"></image>
+      <view class="business_title">{{item.title}}</view>
+      <view class="business_price_wrap">
+        <view class="business_price">￥{{item.price}}</view>
+        <view class="business_love_num">{{item.wants}}人想要</view>
+      </view>
+      <view class="business_school">
+        <text>{{item.user_school}}</text>
+      </view>
+      <view class="business_seller">
+        <image mode="aspectFill" class="business_seller_icon" src="{{item.user_img}}"></image>
+        <view class="business_seller_name">{{item.user_name}}</view>
+      </view>
+    </navigator>
+  </view>
+  <view wx:if="{{isData === 0}}" class="no_business">没有搜到商品哦~</view>
+</view>

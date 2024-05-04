@@ -1,0 +1,179 @@
+Page {
+  background-color: #fff;
+}
+.release_bus_container {
+  font-size: 34rpx;
+  font-weight: 400;
+}
+.release_bus_container .release_bus_wrap {
+  background-color: #fff;
+}
+.release_bus_container .release_bus_wrap .bus_title {
+  width: 90%;
+  height: 80rpx;
+  padding: 34rpx;
+  padding-bottom: 0;
+  border-bottom: 1rpx solid #F1F1F1;
+  font-size: 34rpx;
+}
+.release_bus_container .release_bus_wrap .bus_content {
+  width: 90%;
+  height: 160rpx !important;
+  padding: 30rpx;
+  padding-right: 60rpx;
+}
+.release_bus_container .release_bus_wrap .bus_img_wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding: 0 10rpx 0 10rpx;
+}
+.release_bus_container .release_bus_wrap .bus_img_wrap image {
+  width: 180px;
+  max-height: auto;
+}
+.release_bus_container .release_bus_wrap .bus_img_wrap .close {
+  position: absolute;
+  top: -80rpx;
+  right: 0;
+}
+.release_bus_container .release_bus_wrap .bus_img_wrap .bus_img {
+  width: 200rpx;
+  height: 200rpx;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 200rpx;
+  background-color: #F1F1F1;
+  border-radius: 25rpx;
+  margin: 20rpx;
+  overflow: hidden;
+}
+.release_bus_container .release_bus_wrap .bus_img_wrap .bus_img .iconfont {
+  font-size: 40rpx;
+  color: #ccc;
+}
+.release_bus_container .release_bus_wrap .line-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 50rpx;
+}
+.release_bus_container .release_bus_wrap .line-wrap .bus_seller_school {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30rpx;
+  padding-top: 0;
+}
+.release_bus_container .release_bus_wrap .line-wrap .bus_seller_school .bus_seller_schoolname {
+  padding-left: 10rpx;
+  color: #ccc;
+  font-size: 26rpx;
+}
+.release_bus_container .release_bus_wrap .line-wrap .save_draft {
+  font-size: 26rpx;
+  border: 1rpx solid var(--themeColor);
+  padding: 5rpx 10rpx;
+  border-radius: 30rpx;
+  color: var(--themeColor);
+}
+.release_bus_container .more_info_wrap {
+  margin: 20rpx 0 50rpx 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx 30rpx 0 30rpx;
+  font-size: 34rpx;
+}
+.release_bus_container .more_info_wrap .classify_under {
+  border-bottom: 1rpx solid #F1F1F1;
+}
+.release_bus_container .more_info_wrap .choose_classify_wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+}
+.release_bus_container .more_info_wrap .choose_classify_wrap .iconfont {
+  font-size: 46rpx !important;
+  margin: 0 10rpx 0 0 !important;
+}
+.release_bus_container .more_info_wrap .choose_classify_wrap .choose_classify_left {
+  display: flex;
+  align-items: center;
+  font-size: 34rpx;
+}
+.release_bus_container .more_info_wrap .choose_classify_wrap .choose_classify_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #A5A4A5;
+}
+.release_bus_container .more_info_wrap .choose_classify_wrap .iconfont {
+  margin-left: 10rpx;
+  font-size: 40rpx;
+}
+.release_bus_container .more_info_wrap .choose_classify_content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 30rpx 0;
+  font-size: 30rpx;
+}
+.release_bus_container .more_info_wrap .choose_classify_content .classify_item {
+  box-sizing: border-box;
+  width: 120rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #A5A4A5;
+  background-color: #F7F7F7;
+  border-radius: 30rpx;
+  margin: 10rpx 8rpx;
+}
+.release_bus_container .more_info_wrap .choose_classify_content .active {
+  color: #0baa75;
+  background-color: #caf1e4;
+}
+.release_bus_container .more_info_wrap .price_wrap {
+  display: flex;
+  padding: 20rpx 0;
+  font-size: 34rpx;
+  align-items: center;
+}
+.release_bus_container .more_info_wrap .price_wrap .iconfont {
+  font-size: 46rpx !important;
+  margin: 0 10rpx 0 0 !important;
+}
+.release_bus_container .more_info_wrap .price_wrap .price,
+.release_bus_container .more_info_wrap .price_wrap .phClassPrice {
+  width: 100rpx;
+  color: #EF2024;
+  font-weight: 600;
+}
+.release_bus_container .more_info_wrap .price_wrap .price_detail {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.release_bus_container .more_info_wrap .price_wrap .price_detail .price_num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.release_bus_container .release_btn {
+  width: 60%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: var(--themeColor);
+  margin: 0 auto;
+  border-radius: 60rpx;
+  color: #fff;
+  background-image: var(--themeColor);
+  margin-bottom: 200rpx;
+}

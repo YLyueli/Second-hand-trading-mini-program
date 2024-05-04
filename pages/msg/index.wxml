@@ -1,0 +1,30 @@
+<view class="msg_list_container">
+  <scroll-view scroll-y style="height: 1600rpx" scroll-top='{{scrolltop}}' >
+    <navigator url="/pages/notice/index" hover-class="none" class="msg_notice_wrap" >
+      <view class="iconfont icon-tongzhi1"></view>
+      <view class="notice_name">通知助手</view>
+      <view class="notice_num_wrap" wx:if="{{noticeNum>0}}">{{noticeNum}}</view>
+    </navigator>
+    <view class="separate_wrap"></view>
+    <view class="msg_content_wrap">
+      <view class="msg_wrap" wx:for="{{msgList}}" wx:key="{{index}}" data-item="{{item}}" bindtap="checkMsgDetail">
+        <view class="user_img">
+          <image mode="widthFix" src="{{item.receiveUserImg}}" wx:if="{{item.user_id === id}}"></image>
+          <image mode="widthFix" src="{{item.userImg}}" wx:if="{{item.receive_user_id === id}}"></image>
+        </view>
+        <view class="user_datail">
+          <view class="user_name_time_wrap">
+            <view class="user_name" wx:if="{{item.user_id === id}}">{{item.receiveUserName}}</view>
+            <view class="user_name" wx:if="{{item.receive_user_id === id}}">{{item.userName}}</view>
+            <view class="user_time">{{item.msg_time}}</view>
+          </view>
+          <view class="msg_content">
+            <view>{{item.msg_content}}</view>
+            <view class="num_wrap" wx:if="{{item.num>0}}">{{item.num}}</view>
+            </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<view wx:if="{{num>0}}" class="msg_container">{{num}}</view>

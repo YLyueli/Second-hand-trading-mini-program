@@ -1,0 +1,9 @@
+Page {
+  background-color: #fff;
+}
+.content {
+  font-size: 32rpx;
+  padding: 30rpx;
+  line-height: 60rpx;
+  color: #333;
+}

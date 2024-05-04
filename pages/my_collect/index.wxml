@@ -1,0 +1,14 @@
+<view class="mian_view" wx:if="{{isData == 1}}">
+  <view wx:for="{{goodsInfo}}" wx:key="{{index}}" class="bus_base_info">
+    <navigator hover-class="none" url="/pages/goods_detail/index?commodityId={{item.commodity_id}}&userId={{sellInfo[index].user_id}}" class="top_wrap">
+      <view class="bus_img_wrap">
+        <image class='bus_img' mode="aspectFill" src='{{item.imgs}}'></image>
+      </view>
+      <view class="bus_info">
+        <view class="bus_name">{{item.title}}</view>
+        <view class="bus_price">￥{{item.price}}</view>
+      </view>
+    </navigator>
+  </view>
+</view>
+<view class="none_bus" wx:if="{{isData == 0}}">亲，您还没有收藏任何商品哦~</view>

@@ -1,0 +1,25 @@
+<view class="mian_view" wx:if="{{isData === 1}}">
+  <view wx:for="{{releaseInfo}}" wx:key="{{index}}" class="bus_base_info">
+    <navigator hover-class="none" url="/pages/goods_detail/index?commodityId={{item.commodity_id}}" class="top_wrap">
+      <view class="bus_img_wrap">
+        <image class='bus_img' mode="aspectFill" src='{{item.imgs}}'></image>
+      </view>
+      <view class="bus_info">
+        <view class="bus_name">{{item.title}}</view>
+        <view class="bus_price">￥{{item.price}}</view>
+      </view>
+    </navigator>
+    <view class="bottom_wrap">
+        <view class="order_num">订单号：{{item.id}}</view>
+      <view class="bus_buy_btn" bindtap="handleEdit" data-commodityId="{{item.commodity_id}}" data-index="{{index}}">
+        联系卖家
+      </view>
+    </view>
+  </view>
+</view>
+<view class="none_bus" wx:if="{{isData === 0}}">亲，您还没有购买任何商品哦~</view>
+
+<i-modal visible="{{ visible }}" actions="{{actions}}" bind:click="handleClick">
+  <view>亲，您真的要删除该商品吗？</view>
+</i-modal>
+<i-toast id="toast" />

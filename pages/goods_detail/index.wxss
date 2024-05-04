@@ -1,0 +1,258 @@
+Page {
+  background-color: #fff;
+  margin-bottom: 160rpx;
+}
+.goods_detail_wrap {
+  padding: 40rpx 0;
+  position: relative;
+  margin-bottom: 160rpx;
+}
+.goods_detail_wrap .user_info_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #f1f1f1;
+  padding-bottom: 10rpx;
+  padding-left: 30rpx;
+}
+.goods_detail_wrap .user_info_wrap .user_img_name {
+  display: flex;
+  align-items: center;
+}
+.goods_detail_wrap .user_info_wrap .user_img_name .user_img image {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+}
+.goods_detail_wrap .user_info_wrap .user_img_name .user {
+  padding: 10rpx 20rpx;
+  display: flex;
+  height: 110rpx;
+  flex-direction: column;
+}
+.goods_detail_wrap .user_info_wrap .user_img_name .user .name {
+  font-size: 34rpx;
+  font-weight: 600;
+  padding-bottom: 10rpx;
+}
+.goods_detail_wrap .user_info_wrap .user_img_name .user .school {
+  font-size: 28rpx;
+  color: #A3A3A3;
+}
+.goods_detail_wrap .user_info_wrap .attention {
+  font-weight: 500;
+  background-color: #F7F7F7;
+  border-radius: 80rpx;
+  padding: 10rpx 20rpx;
+  margin-right: 30rpx;
+}
+.goods_detail_wrap .bus_price_follow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30rpx 0 40rpx 0;
+  padding: 0 30rpx;
+}
+.goods_detail_wrap .bus_price_follow .bus_price {
+  font-weight: 700;
+  color: #FC4643;
+}
+.goods_detail_wrap .bus_price_follow .bus_price text {
+  font-size: 46rpx;
+}
+.goods_detail_wrap .bus_price_follow .bus_follow {
+  color: #A3A3A3;
+}
+.goods_detail_wrap .bus_content {
+  padding: 0 30rpx;
+  margin-bottom: 30rpx;
+}
+.goods_detail_wrap .bus_content .mian_content {
+  font-size: 32rpx;
+  line-height: 30px;
+  padding-bottom: 60rpx;
+}
+.goods_detail_wrap .bus_content .pic_content {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.goods_detail_wrap .bus_content .pic_content .img {
+  width: 49%;
+  margin: 0.5%;
+  height: 360rpx;
+}
+.goods_detail_wrap .bus_content .pic_content .img:first-child {
+  width: 100% !important;
+  min-height: 800rpx !important;
+  margin-bottom: 0.5%;
+}
+.goods_detail_wrap .bus_operation {
+  border-top: 1rpx solid #f1f1f1;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 120rpx;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.goods_detail_wrap .bus_operation .left_wrap {
+  display: flex;
+  align-items: center;
+  margin-left: 30rpx;
+  color: #9F9F9F;
+}
+.goods_detail_wrap .bus_operation .left_wrap .comment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.goods_detail_wrap .bus_operation .left_wrap .collection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 40rpx;
+}
+.goods_detail_wrap .bus_operation .left_wrap .iconfont {
+  font-size: 46rpx;
+}
+.goods_detail_wrap .bus_operation .left_wrap .report {
+  margin-left: 40rpx;
+}
+.goods_detail_wrap .bus_operation .left_wrap .report .iconfont {
+  height: 49.34rpx;
+  line-height: 49.34rpx;
+  text-align: center;
+  font-size: 40rpx !important;
+}
+.goods_detail_wrap .bus_operation .right_wrap {
+  margin-right: 30rpx;
+}
+.goods_detail_wrap .bus_operation .right_wrap button {
+  font-size: 32rpx;
+  width: 180rpx;
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+  border-radius: 60rpx;
+  background-color: var(--themeColor);
+  color: #fff;
+}
+.goods_detail_wrap .my_comment_wrap .title {
+  padding: 30rpx;
+  border-bottom: 1px solid #f1f1f1;
+}
+.goods_detail_wrap .my_comment_wrap .content {
+  display: flex;
+  flex-direction: column;
+}
+.goods_detail_wrap .my_comment_wrap .content .user_comment_wrap {
+  display: flex;
+  justify-content: space-between;
+  margin: 10rpx 30rpx;
+  padding: 20rpx 0;
+  font-size: 29rpx;
+  border-bottom: 1px solid #f1f1f1;
+}
+.goods_detail_wrap .my_comment_wrap .content .user_comment_wrap .left_comment_wrap {
+  display: flex;
+}
+.goods_detail_wrap .my_comment_wrap .content .user_comment_wrap .left_comment_wrap .user_img image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.goods_detail_wrap .my_comment_wrap .content .user_comment_wrap .left_comment_wrap .main_comment {
+  padding: 0 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.goods_detail_wrap .my_comment_wrap .content .user_comment_wrap .left_comment_wrap .main_comment .user_comment_name {
+  font-weight: 600;
+  color: #9F9F9F;
+  padding-bottom: 10rpx;
+}
+.goods_detail_wrap .my_comment_wrap .content .user_comment_wrap .right_comment_wrap {
+  color: #A5A5A5;
+}
+.input_comment {
+  display: flex;
+  width: 100%;
+  height: 120rpx;
+  position: fixed;
+  bottom: 0px;
+  border-top: 1rpx #FBFBFB solid;
+  background-color: white;
+  padding: 0 20rpx ;
+  align-items: center;
+  margin-top: 40rpx;
+}
+.input_comment button {
+  font-size: 28rpx !important;
+  width: 18%;
+  height: 85rpx;
+  line-height: 85rpx;
+  text-align: center;
+  background-color: var(--themeColor);
+  color: white;
+}
+.input_comment input {
+  width: 75%;
+  height: 75rpx;
+  padding-left: 30rpx;
+  border-radius: 15rpx;
+  margin-right: 20rpx;
+  border: 2rpx solid #E6E6E6;
+  background-color: #FCFAFB;
+}
+.commentTrans {
+  margin-left: 100rpx !important;
+}
+.imagee {
+  width: 46rpx;
+  height: 50rpx;
+}
+.goods_selled .title {
+  height: 160rpx;
+  line-height: 180rpx;
+  text-align: center;
+  color: #333;
+  font-size: 32rpx;
+  margin: 0 30rpx;
+}
+.goods_selled .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fafafa;
+  padding: 30rpx;
+  margin: 30rpx;
+  border-radius: 20rpx;
+}
+.goods_selled .content .left_wrap {
+  display: flex;
+  align-items: center;
+}
+.goods_selled .content .left_wrap image {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 30rpx;
+  margin-right: 30rpx;
+}
+.goods_selled .content .left_wrap .bus_info {
+  height: 160rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  justify-content: space-around;
+}
+.goods_selled .content .left_wrap .bus_info .bus_price {
+  color: #FC4643;
+}
+.goods_selled .content .iconfont {
+  font-size: 120rpx;
+}

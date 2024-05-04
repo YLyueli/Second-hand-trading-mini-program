@@ -1,0 +1,57 @@
+<view class="release_bus_container">
+  <view class="release_bus_wrap">
+    <textarea class="bus_title" placeholder="标题" placeholder-class="phClass" value="{{title}}" bindinput="handleInputTitle" maxlength="20" />
+    <textarea class="bus_content" placeholder="买家都关心品牌型号、入手渠道、转手原因..." value="{{content}}" bindinput="handleInputContent" auto-height  maxlength="2000" />
+    <view class="bus_img_wrap">
+      <block wx:for="{{imgList}}">
+        <view class="bus_img">
+          <image mode="widthFix" src="{{item}}" data-num="{{index}}" catchtap='preview_img'></image>
+          <view style='width:40rpx;height:40rpx;' data-num="{{index}}" class='iconfont icon-chacha3 close' catchtap='delete_th'></view>
+        </view>
+      </block>
+      <view class="bus_img" wx:if="{{imgList.length<9}}" bindtap="handleChooseImg">
+        <view class="iconfont icon-tianjia"></view>
+      </view>
+    </view>
+    <view class="line-wrap">
+      <view class="bus_seller_school">
+        <view class="iconfont icon-dingwei1"></view>
+        <view class="bus_seller_schoolname">{{school}}</view>
+      </view>
+      <!-- <view class="save_draft">存草稿</view> -->
+    </view>
+  </view>
+  <view class="more_info_wrap">
+    <view class="choose_classify_wrap {{chooseClassify?'':'classify_under' }}" bindtap="handleChooseClassify">
+      <view class="choose_classify_left">
+        <view class="iconfont icon-fenleiliebiao"></view>
+        分类
+      </view>
+      <view class="choose_classify_right">
+        <view wx:if="{{currentChoose===0}}">必填</view>
+        <view wx:else>已填</view>
+        <view wx:if="{{!chooseClassify}}" class="iconfont icon-fangxianghuise"></view>
+        <view wx:else class="iconfont icon-fangxiangshang-copy"></view>
+      </view>
+    </view>
+    <view class="choose_classify_content" wx:if="{{chooseClassify}}">
+      <view class="classify_item {{currentChoose===index+1?'active':''}}" bindtap="chooseClassifyTitle" data-title="{{item}}" data-index="{{index+1}}" wx:for="{{classifyTitle}}" wx:key="{{index}}">
+        {{item}}
+      </view>
+    </view>
+    <view class="price_wrap">
+      <view class="iconfont icon-shouye"></view>
+      <view class="price_detail">
+        <view style="width: 130rpx">价格</view>
+        <view class="price_num">
+          <view style="padding: 0  10rpx;color:#EF2024; font-weight: 600">￥</view>
+          <input value="{{price}}" bindinput="handleInputPrice" class="price" placeholder="0.00" placeholder-class="phClassPrice" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="release_btn" bindtap="handleRelease">发布</view>
+</view>
+
+<i-message id="message" />
+<i-toast id="toast" />

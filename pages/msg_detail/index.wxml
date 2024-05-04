@@ -1,0 +1,43 @@
+<view class='homeView'>
+  <scroll-view scroll-y style="height: 1200rpx" scroll-top='{{scrolltop}}'>
+    <view class='listView'>
+      <block wx:for="{{serverMsg}}" wx:key='*this'>
+        <view wx:if="{{item.user_id!==userInfo.userId}}" class='leftView'>
+          <!-- <view class='name'>{{receiveUserInfo.userName}}</view> -->
+          <view class='imgmsgleft'>
+            <navigator hover-class="none" url="/pages/person/index?id={{receiveUserInfo.userId}}">
+              <image class='touimg' src='{{receiveUserInfo.userImg}}'></image>
+            </navigator>
+            <view class="msg_box">{{item.msg}}</view>
+          </view>
+        </view>
+        <view wx:else class='rightView'>
+          <!-- <view class='name'>{{userInfo.userName}}</view> -->
+          <view class='imgmsg'>
+            <view class="msg_box">{{item.msg}}</view>
+            <navigator hover-class="none" url="/pages/person/index?id={{userInfo.userId}}">
+              <image class='touimg' src='{{userInfo.userImg}}'></image>
+            </navigator>
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>
+<view class="buy_btn">
+  <view class="left_wrap" bindtap="handleGoodDetail">
+    <image class='bus_img' mode="aspectFill" src='{{commodityInfo.img}}'></image>
+    <view class="bus_info">
+      <view class="bus_price">￥{{commodityInfo.price}}</view>
+      <view class="bus_type">线下交易</view>
+    </view>
+  </view>
+  <view class="right_wrap">
+    <navigator wx:if="{{commodityInfo.sell===0 && userInfo.userId === dialogueInfo.buy_id}}" url="/pages/buy/index?commodityId={{commodityId}}&groupId={{groupId}}" open-type="navigate" class="bus_buy_btn" hover-class="none">立即购买</navigator>
+    <navigator hover-class="none" wx:if="{{commodityInfo.sell===1}}" class="bus_buy_btn">已售出</navigator>
+  </view>
+</view>
+<view class='sendView'>
+  <input bindinput='sendTextBind' placeholder="输入聊天内容" value='{{sendText}}' cursor-spacing='5' />
+  <button bindtap='sendBtn' disabled="{{sendText===''}}">发送</button>
+</view>

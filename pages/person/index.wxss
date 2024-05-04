@@ -1,0 +1,190 @@
+Page {
+  background-color: #fff;
+}
+.person_info_container .person_bg image {
+  width: 100%;
+  height: 300rpx;
+}
+.person_info_container .person_bg .report {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  width: 85rpx;
+  height: 40rpx;
+  font-size: 26rpx;
+  text-align: center;
+  line-height: 40rpx;
+  color: #504d4d;
+  background-color: #fff;
+  border-radius: 30rpx;
+  opacity: 0.8;
+}
+.person_info_container .person_base_info {
+  display: flex;
+  justify-content: space-between;
+}
+.person_info_container .person_base_info .user_img {
+  position: relative;
+  top: -60rpx;
+  left: 20rpx;
+}
+.person_info_container .person_base_info .user_img image {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 10rpx solid #fff;
+}
+.person_info_container .person_base_info .user_guanzhu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.person_info_container .person_base_info .user_fans {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.person_info_container .person_base_info .num {
+  font-size: 28rpx;
+  padding: 10rpx 0 0 0;
+}
+.person_info_container .person_base_info .text {
+  font-size: 28rpx;
+  color: #989A99;
+}
+.person_info_container .person_base_info .user_guanzhu_btn {
+  width: 300rpx;
+  margin-top: 15rpx;
+}
+.person_info_container .person_base_info .user_guanzhu_btn button {
+  font-size: 30rpx;
+  width: 65%;
+  color: #fff;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: var(--themeColor);
+  border-radius: 60rpx;
+}
+.person_info_container .person_name {
+  width: 100%;
+  display: flex;
+  padding-left: 20rpx;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+  padding-bottom: 30rpx;
+  border-bottom: 1rpx solid #F0F0F0;
+  top: -50rpx;
+}
+.person_info_container .person_name .name {
+  font-size: 36rpx;
+  font-weight: 600;
+}
+.person_info_container .person_name .school {
+  font-size: 28rpx;
+  color: #A2A2A2;
+  padding-left: 10rpx;
+}
+.person_info_container .person_main {
+  position: relative;
+  top: -50rpx;
+}
+.person_info_container .person_main .title_container {
+  width: 180rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.person_info_container .person_main .title {
+  width: 200rpx;
+  font-size: 32rpx;
+  padding: 20rpx 30rpx 15rpx 30rpx;
+}
+.person_info_container .person_main .fff {
+  width: 30rpx;
+  margin-bottom: 20rpx;
+  border-bottom: 4rpx solid var(--themeColor);
+}
+.person_info_container .index_business_display {
+  width: 720rpx;
+  column-count: 2;
+  column-width: 340rpx;
+  column-gap: 20rpx;
+  margin: 0 auto;
+}
+.person_info_container .index_business_display .icon {
+  position: absolute;
+  z-index: 999;
+  font-size: 120rpx;
+  right: 18rpx;
+}
+.person_info_container .index_business_display .index_business_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #fff;
+  border-radius: 30rpx;
+  overflow: hidden;
+  margin-bottom: 60rpx;
+  break-inside: avoid;
+  position: relative;
+}
+.person_info_container .index_business_display .index_business_wrap image {
+  width: 100% !important;
+  border-radius: 30rpx;
+}
+.person_info_container .index_business_display .index_business_wrap .business_title {
+  font-size: 28rpx;
+  font-weight: 600;
+  padding: 10rpx 0 0 20rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.person_info_container .index_business_display .index_business_wrap .business_price_wrap {
+  padding: 10rpx 20rpx 0 20rpx ;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #999595;
+  font-size: 24rpx;
+}
+.person_info_container .index_business_display .index_business_wrap .business_price_wrap .business_price {
+  font-size: 28rpx;
+  color: #F74C56;
+  font-weight: 600;
+  margin-right: 30rpx;
+}
+.person_info_container .index_business_display .index_business_wrap .business_school {
+  padding-left: 20rpx;
+  margin: 10rpx 0;
+}
+.person_info_container .index_business_display .index_business_wrap .business_school text {
+  padding: 5rpx 10rpx;
+  border: 1rpx solid var(--themeColor);
+  border-radius: 20rpx;
+  color: var(--themeColor);
+  font-size: 24rpx;
+}
+.person_info_container .index_business_display .index_business_wrap .business_seller {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10rpx 0 20rpx 20rpx;
+  color: #999595;
+  font-size: 26rpx;
+}
+.person_info_container .index_business_display .index_business_wrap .business_seller .business_seller_name {
+  font-weight: 500;
+  padding-left: 10rpx;
+}
+.no {
+  padding: 180rpx 0;
+  font-size: 36rpx;
+  color: #ccc;
+  display: flex;
+  justify-content: center;
+}

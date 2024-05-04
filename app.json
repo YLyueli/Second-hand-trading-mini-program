@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my_release/index",
+    "pages/goods_list/index",
+    "pages/goods_detail/index",
+    "pages/my_sell/index",
+    "pages/release/index",
+    "pages/msg/index",
+    "pages/user/index",
+    "pages/msg_detail/index",
+    "pages/my_buy/index",
+    "pages/my_collect/index",
+    "pages/buy/index",
+    "pages/person/index",
+    "pages/auth/index",
+    "pages/login/index",
+    "pages/notice/index",
+    "pages/about/index",
+    "pages/my_friend/index",
+    "pages/help/index",
+    "pages/report/index",
+    "pages/cus_service/index",
+    "pages/school/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#33CC99",
+    "navigationBarTitleText": "黑马交易",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false,
+    "backgroundColor": "#fff"
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/release/index",
+      "text": "发布"
+    }, {
+      "pagePath": "pages/msg/index",
+      "text": "消息"
+    }, {
+      "pagePath": "pages/user/index",
+      "text": "我的"
+    }]
+  },     
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "i-tab-bar": "/dist/tab-bar/index",
+    "i-tab-bar-item": "/dist/tab-bar-item/index",
+    "i-icon": "/dist/icon/index"
+  },
+  "debug": true
+}
